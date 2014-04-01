@@ -1,7 +1,15 @@
-Nodejs Vagrant box
+Glayzzle devbox
 ================
 
-Ubuntu Precise box simply installing Nodejs via apt.
+Devbox for the Glayzzle project http://glayzzle.com.
+
+In the box
+------------
+
+Ubuntu Precise 64 with latest :
+- nodejs
+- npm
+- glayzzle
 
 Requirements
 ------------
@@ -13,8 +21,8 @@ Installation
 ------------
 
 ```bash
-$ git clone https://github.com/vicb/vagrant-nodejs.git
-$ cd vagrant-nodejs
+$ git clone https://github.com/aterrien/glayzzle-devbox.git
+$ cd glayzzle-devbox
 $ vagrant up
 ```
 
@@ -24,9 +32,6 @@ Once the VM is booted you can log via SSH
 $ vagrant ssh
 ```
 
-Start a default server
+Glayzzle
 ------------
-```bash
-$ node /opt/hello/server.js
-```
-
+https://github.com/ichiriac/glayzzle
