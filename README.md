@@ -32,6 +32,15 @@ Once the VM is booted you can log via SSH
 $ vagrant ssh
 ```
 
+Update
+------------
+
+Update devbox OS, nodejs and npm packages. 
+
+```bash
+$ vagrant provision
+```
+
 Glayzzle
 ------------
 https://github.com/ichiriac/glayzzle
