@@ -25,9 +25,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     apt-get update
     apt-get install python g++ make nodejs -y --force-yes
 
-    npm install -g glayzzle
-    if [ ! -d "/home/vagrant/glayzzle" ]; then
-    	git clone https://github.com/ichiriac/glayzzle.git /home/vagrant/glayzzle
+    if [ ! -d "/usr/lib/node_modules/glayzzle" ]; then
+        npm install -g glayzzle
+    fi
+
+    npm update -g
+
+    if [ ! -d "/vagrant/glayzzle" ]; then
+    	git clone https://github.com/ichiriac/glayzzle.git /vagrant/glayzzle
     fi
 
     cp /vagrant/.bash_login /home/vagrant/.bash_login
