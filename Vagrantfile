@@ -33,6 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     if [ ! -d "/vagrant/glayzzle" ]; then
     	git clone https://github.com/ichiriac/glayzzle.git /vagrant/glayzzle
+	chmod -R 755 /vagrant/glayzzle
     fi
 
     cp /vagrant/.bash_login /home/vagrant/.bash_login
