@@ -29,7 +29,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     if [ ! -d "/usr/lib/node_modules/glayzzle" ]; then
         npm install -g glayzzle
-	npm install -g node-gyp
+    fi
+
+    if [ ! -d "/usr/lib/node_modules/node-gyp" ]; then
+        npm install -g node-gyp
     fi
 
     npm update -g
@@ -37,6 +40,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     if [ ! -d "/vagrant/glayzzle" ]; then
     	git clone https://github.com/ichiriac/glayzzle.git /vagrant/glayzzle
 	chmod -R 755 /vagrant/glayzzle
+    fi
+
+    if [ ! -d "/vagrant/poojs" ]; then
+        git clone https://github.com/glayzzle/poojs.git /vagrant/poojs
     fi
 
     cp /vagrant/.bash_login /home/vagrant/.bash_login
