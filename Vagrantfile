@@ -25,8 +25,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     apt-get update
     apt-get install python g++ make nodejs -y --force-yes
 
+    apt-get install npm -y --force-yes
+
     if [ ! -d "/usr/lib/node_modules/glayzzle" ]; then
         npm install -g glayzzle
+	npm install -g node-gyp
     fi
 
     npm update -g
