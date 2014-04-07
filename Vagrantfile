@@ -46,6 +46,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         git clone https://github.com/glayzzle/poojs.git /vagrant/poojs
     fi
 
+    if [ ! -d "/vagrant/tests" ]; then
+        git clone https://github.com/glayzzle/tests.git /vagrant/tests
+    fi
+
+
     cp /vagrant/.bash_login /home/vagrant/.bash_login
     cp /vagrant/.motd /home/vagrant/.motd
   shell
