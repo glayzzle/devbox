@@ -21,8 +21,8 @@ Installation
 ------------
 
 ```bash
-$ git clone https://github.com/aterrien/glayzzle-devbox.git
-$ cd glayzzle-devbox
+$ git clone https://github.com/glayzzle/devbox.git
+$ cd devbox
 $ vagrant up
 ```
 
