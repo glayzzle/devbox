@@ -43,4 +43,4 @@ $ vagrant provision
 
 Glayzzle
 ------------
-https://github.com/ichiriac/glayzzle
+https://github.com/glayzzle/glayzzle

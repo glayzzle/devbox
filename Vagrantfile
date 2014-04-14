@@ -28,18 +28,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     apt-get install npm -y --force-yes
 
     if [ ! -d "/usr/lib/node_modules/glayzzle" ]; then
-        npm install -g glayzzle
+        sudo npm install -g glayzzle
     fi
 
     if [ ! -d "/usr/lib/node_modules/node-gyp" ]; then
-        npm install -g node-gyp
+        sudo npm install -g node-gyp
     fi
 
-    npm update -g
+    sudo npm update -g
 
     if [ ! -d "/vagrant/glayzzle" ]; then
-    	git clone https://github.com/ichiriac/glayzzle.git /vagrant/glayzzle
-	chmod -R 755 /vagrant/glayzzle
+      git clone https://github.com/glayzzle/glayzzle.git /vagrant/glayzzle
+      chmod -R 755 /vagrant/glayzzle
     fi
 
     if [ ! -d "/vagrant/poojs" ]; then
